@@ -25,7 +25,7 @@ const todoReducer = createSlice({
       state.todos.push(action.payload);
     },
     updateLastTodoId: (state, action) => {
-      const todoId = action.payload;
+      const todoId = action.payload.name;
       const updatedTodo = { ...state.todos.at(-1), id: todoId };
       state.todos.splice(-1, 1, updatedTodo);
     },
